@@ -35,18 +35,22 @@ function update() {
     
 }
 
+function updateMetronomeCount() {
+    tickCount.innerText = `Metronome Count = ${count}`;
+}
+
 function playMetronome() {
     //play different sound on 4th tick
 	if (count === 4) {
 		tock.play();
         //update tickCounter with current count #
-        tickCount.innerText = `Metronome Count = ${count}`;
+        updateMetronomeCount()
 		//reset count to 0 after the the 4th tick
         count = 0;
 	} else {
 		tick.play();
         //update tickCounter with current count #
-        tickCount.innerText = `Metronome Count = ${count}`;
+        updateMetronomeCount()
 	}
 }
 
