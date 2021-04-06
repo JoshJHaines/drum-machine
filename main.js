@@ -3,39 +3,34 @@
  **********/
 const tick = new Audio("sounds/tick.mp3");
 const tock = new Audio("sounds/tock.mp3");
-const kickDrum = new Audio("sounds/kick-drum.mp3")
-const snareDrum = new Audio("sounds/snare-drum.mp3")
-const hiHat = new Audio("sounds/hi-hat.mp3")
+const kickDrum = new Audio("sounds/kick-drum.mp3");
+const snareDrum = new Audio("sounds/snare-drum.mp3");
+const hiHat = new Audio("sounds/hi-hat.mp3");
 
 /***************
  * CHECK BOXES *
  ***************/
-const boxMetro = document.querySelector("#metronome")
-const boxKickDrum = document.querySelector("#kick-drum")
-const boxSnareDrum = document.querySelector("#snare-drum")
-const boxHiHat = document.querySelector("#hi-hat")
+const boxMetro = document.querySelector("#metronome");
+const boxKickDrum = document.querySelector("#kick-drum");
+const boxSnareDrum = document.querySelector("#snare-drum");
+const boxHiHat = document.querySelector("#hi-hat");
 
-boxMetro.checked = false
-boxKickDrum.checked = false
-boxSnareDrum.checked = false
-boxHiHat.checked = false
-
-
+boxMetro.checked = false;
+boxKickDrum.checked = false;
+boxSnareDrum.checked = false;
+boxHiHat.checked = false;
 
 /*******************
  * ADDING ELEMENTS *
  *******************/
 const tickCount = document.createElement("h1");
 
-document.body.appendChild(tickCount)
+document.body.appendChild(tickCount);
 
 /***************
  * OTHER SHIZZ *
  ***************/
 let count = 0;
-
-
-
 
 /*********************************************************
  * ****************** UPDATE FUNCTION ****************** *
@@ -43,27 +38,27 @@ let count = 0;
 
 // This function is called every 600ms
 function update() {
-    if (boxMetro.checked === true){
-        playMetronome()
-    }
-    if (boxKickDrum.checked === true){
-    	kickDrum.play()
-    }
-    if (boxSnareDrum.checked === true) {
-        snareDrum.play()
-    }
-    if (boxHiHat.checked === true) {
-        hiHat.play()
-    }
-    updateMetronomeCount()
+	if (boxMetro.checked) {
+		playMetronome();
+	}
+	if (boxKickDrum.checked) {
+		kickDrum.play();
+	}
+	if (boxSnareDrum.checked) {
+		snareDrum.play();
+	}
+	if (boxHiHat.checked) {
+		hiHat.play();
+	}
+	updateMetronomeCount();
 }
 
 function updateMetronomeCount() {
-    count++;
-    tickCount.innerText = `Metronome Count = ${count}`;
-    if (count === 4){
-        count = 0
-    }
+	count++;
+	tickCount.innerText = `Metronome Count = ${count}`;
+	if (count === 4) {
+		count = 0;
+	}
 }
 
 function playMetronome() {
