@@ -9,15 +9,14 @@ const tock = new Audio("sounds/tock.mp3");
  * ADDING ELEMENTS *
  *******************/
 const tickCount = document.createElement("h1");
-const checkBoxDiv = document.createElement("div")
 
 document.body.appendChild(tickCount)
-document.body.appendChild(checkBoxDiv)
 
 /***************
  * OTHER SHIZZ *
  ***************/
 let count = 0;
+
 
 
 /*********************************************************
