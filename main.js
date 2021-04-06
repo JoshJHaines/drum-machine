@@ -30,6 +30,12 @@ function update() {
 	count++;
     //Verify in console its counting
 	console.log(count);
+
+    playMetronome()
+    
+}
+
+function playMetronome() {
     //play different sound on 4th tick
 	if (count === 4) {
 		tock.play();
