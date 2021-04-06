@@ -40,17 +40,12 @@ function updateMetronomeCount() {
 }
 
 function playMetronome() {
-    //play different sound on 4th tick
+    updateMetronomeCount()
 	if (count === 4) {
 		tock.play();
-        //update tickCounter with current count #
-        updateMetronomeCount()
-		//reset count to 0 after the the 4th tick
         count = 0;
 	} else {
 		tick.play();
-        //update tickCounter with current count #
-        updateMetronomeCount()
 	}
 }
 
