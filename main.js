@@ -56,8 +56,7 @@ function update() {
         playSnareDrum()
 	}
 	if (boxHiHat.checked) {
-        hiHat.load();
-		hiHat.play();
+        playHiHat()
 	}
 	updateMetronomeCount();
     // console.log(count)
@@ -96,6 +95,16 @@ function playSnareDrum() {
     } else if (parseInt(countSnareDrum.value) === count){
         snareDrum.load()
         snareDrum.play();
+    }
+}
+
+function playHiHat() {
+    if(countHiHat.value === ""){
+        hiHat.load()
+        hiHat.play();
+    } else if (parseInt(countHiHat.value) === count){
+        hiHat.load()
+        hiHat.play();
     }
 }
 
