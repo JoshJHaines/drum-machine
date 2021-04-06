@@ -4,6 +4,20 @@
 const tick = new Audio("sounds/tick.mp3");
 const tock = new Audio("sounds/tock.mp3");
 
+/***************
+ * CHECK BOXES *
+ ***************/
+const boxMetro = document.querySelector("#metronome")
+const boxKickDrum = document.querySelector("#kick-drum")
+const boxSnareDrum = document.querySelector("#snare-drum")
+const boxHiHat = document.querySelector("#hi-hat")
+
+boxMetro.checked = true
+boxKickDrum.checked = false
+boxSnareDrum.checked = false
+boxHiHat.checked = false
+
+
 
 /*******************
  * ADDING ELEMENTS *
@@ -16,6 +30,7 @@ document.body.appendChild(tickCount)
  * OTHER SHIZZ *
  ***************/
 let count = 0;
+
 
 
 
