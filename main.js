@@ -8,12 +8,13 @@ let count = 0
 function update() {
 
     // Play the 'tick' sound
-    tick.play();
     count++;
     console.log(count)
     if(count === 4){
     tock.play();
     count = 0
+    } else {
+        tick.play();
     }
 }
 
