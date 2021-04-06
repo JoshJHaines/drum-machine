@@ -15,7 +15,7 @@ const boxKickDrum = document.querySelector("#kick-drum");
 const boxSnareDrum = document.querySelector("#snare-drum");
 const boxHiHat = document.querySelector("#hi-hat");
 
-boxMetro.checked = false;
+boxMetro.checked = true;
 boxKickDrum.checked = false;
 boxSnareDrum.checked = false;
 boxHiHat.checked = false;
