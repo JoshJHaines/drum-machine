@@ -7,7 +7,7 @@ let count = 0
 // This function is called every 600ms
 function update() {
 
-    // Play the 'tick' sound
+    // Play the 'tick'/'tock' sound
     count++;
     console.log(count)
     if(count === 4){
