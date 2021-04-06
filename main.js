@@ -20,6 +20,13 @@ boxKickDrum.checked = false;
 boxSnareDrum.checked = false;
 boxHiHat.checked = false;
 
+/***************
+ * COUNT BOXES *
+ ***************/
+const countKickDrum = document.querySelector(".kick-count")
+const countSnareDrum = document.querySelector(".snare-count")
+const countHiHat = document.querySelector(".hi-count")
+
 /*******************
  * ADDING ELEMENTS *
  *******************/
@@ -42,8 +49,7 @@ function update() {
 		playMetronome();
 	}
 	if (boxKickDrum.checked) {
-        kickDrum.load()
-		kickDrum.play();
+        playKickDrum()
 	}
 	if (boxSnareDrum.checked) {
         snareDrum.load();
@@ -71,6 +77,12 @@ function playMetronome() {
 	} else {
 		tick.play();
 	}
+}
+
+function playKickDrum() {
+    kickDrum.load()
+	kickDrum.play();
+    console.log(countKickDrum)
 }
 
 // This function sets up update() to be called every 600ms
