@@ -23,9 +23,10 @@ boxHiHat.checked = false;
 /***************
  * COUNT BOXES *
  ***************/
-const countKickDrum = document.querySelector(".kick-count")
-const countSnareDrum = document.querySelector(".snare-count")
-const countHiHat = document.querySelector(".hi-count")
+const countKickDrum = document.querySelector("#kick-count")
+const countSnareDrum = document.querySelector("#snare-count")
+const countHiHat = document.querySelector("#hi-count")
+
 
 /*******************
  * ADDING ELEMENTS *
@@ -80,9 +81,13 @@ function playMetronome() {
 }
 
 function playKickDrum() {
-    kickDrum.load()
-	kickDrum.play();
-    console.log(countKickDrum)
+    if(countKickDrum.value === ""){
+        kickDrum.load()
+        kickDrum.play();
+    } else if (parseInt(countKickDrum.value) === count){
+        kickDrum.load()
+        kickDrum.play();
+    }
 }
 
 // This function sets up update() to be called every 600ms
