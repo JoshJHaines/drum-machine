@@ -53,8 +53,7 @@ function update() {
         playKickDrum()
 	}
 	if (boxSnareDrum.checked) {
-        snareDrum.load();
-		snareDrum.play();
+        playSnareDrum()
 	}
 	if (boxHiHat.checked) {
         hiHat.load();
@@ -87,6 +86,16 @@ function playKickDrum() {
     } else if (parseInt(countKickDrum.value) === count){
         kickDrum.load()
         kickDrum.play();
+    }
+}
+
+function playSnareDrum() {
+    if(countSnareDrum.value === ""){
+        snareDrum.load()
+        snareDrum.play();
+    } else if (parseInt(countSnareDrum.value) === count){
+        snareDrum.load()
+        snareDrum.play();
     }
 }
 
