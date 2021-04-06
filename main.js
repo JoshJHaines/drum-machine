@@ -3,6 +3,9 @@
  **********/
 const tick = new Audio("sounds/tick.mp3");
 const tock = new Audio("sounds/tock.mp3");
+const kickDrum = new Audio("sounds/kick-drum.mp3")
+const snareDrum = new Audio("sounds/snare-drum.mp3")
+const hiHat = new Audio("sounds/hi-hat.mp3")
 
 /***************
  * CHECK BOXES *
@@ -43,6 +46,15 @@ function update() {
     if (boxMetro.checked === true){
         playMetronome()
     }
+    if (boxKickDrum.checked === true){
+    	kickDrum.play()
+    }
+    if (boxSnareDrum.checked === true) {
+        snareDrum.play()
+    }
+    if (boxHiHat.checked === true) {
+        hiHat.play()
+    }
     updateMetronomeCount()
 }
 
@@ -57,7 +69,6 @@ function updateMetronomeCount() {
 function playMetronome() {
 	if (count >= 3) {
 		tock.play();
-        // count = 0;
 	} else {
 		tick.play();
 	}
