@@ -13,6 +13,7 @@ function update() {
     console.log(count)
     if(count === 4){
     tock.play();
+    count = 0
     }
 }
 
