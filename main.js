@@ -42,15 +42,19 @@ function update() {
 		playMetronome();
 	}
 	if (boxKickDrum.checked) {
+        kickDrum.load()
 		kickDrum.play();
 	}
 	if (boxSnareDrum.checked) {
+        snareDrum.load();
 		snareDrum.play();
 	}
 	if (boxHiHat.checked) {
+        hiHat.load();
 		hiHat.play();
 	}
 	updateMetronomeCount();
+    // console.log(count)
 }
 
 function updateMetronomeCount() {
