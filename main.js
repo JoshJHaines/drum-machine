@@ -30,7 +30,7 @@ document.body.appendChild(tickCount);
 /***************
  * OTHER SHIZZ *
  ***************/
-let count = 0;
+let count = 1;
 
 /*********************************************************
  * ****************** UPDATE FUNCTION ****************** *
@@ -58,15 +58,15 @@ function update() {
 }
 
 function updateMetronomeCount() {
-	count++;
 	tickCount.innerText = `Metronome Count = ${count}`;
-	if (count === 4) {
-		count = 0;
+	count++;
+	if (count === 5) {
+		count = 1;
 	}
 }
 
 function playMetronome() {
-	if (count >= 3) {
+	if (count === 4) {
 		tock.play();
 	} else {
 		tick.play();
